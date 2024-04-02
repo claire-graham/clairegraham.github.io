@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Width Background Image</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="full-width-image-container">
+        <img src="alter.jpg" alt="Background" class="full-width-image">
+        <div class="content">
+            <h1>Claire Graham Portfolio</h1>
+            <p>Claire is a freelance dancer based in Düsseldorf. She has been dancing professionally for three years, and choreographed various short pieces in that time. 
+                She received her main training at the Martha Graham school in New York, where she gined an in-depth knowledge of the modern dance technique, and knowledge of the spine as a whole. From there she went on to the Area Jeune Ballet, where she worked with various choreographers, and went on to work with Julio Arozarena as a soloist in his production of "Polymère"
+                Today, she is working as a member of the the artist collective "Nowaday Dance Company".
+            </p>
+        </div>
+    </div>
+
+        <div class="section" id="dancer-presentation">
+            <h2>Dancer Presentation</h2>
+            <div class="video-container">
+                <iframe class="video" src="https://www.youtube.com/embed/HEZ3sXiTkEI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="video" src="https://www.youtube.com/embed/G_pbeYhWPzc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="video" src="https://youtube.com/embed/68HFuEAZSik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+        </div>
+        
+        <div class="section2" id="choreography">
+            <h2>Choreographic Works</h2>
+            
+
+     
+        <div class="videos">
+        <iframe width="560" height="315" src="https://youtube.com/embed/K3RvK9_UlX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://youtube.com/embed/W2_-YWUjVLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://youtube.com/embed/ztkFg9ShcnM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+    </div>
+    
+
+    <div class="section" id="contact">
+        <div class="background-image">
+            <img src="/Users/clairegraham/Downloads/alter ego/IMG_3145 (1).jpeg" alt="Background" class="full-width-image">
+        </div>
+            <h1>Contact</h1>
+        </div>
+    </div> 
+
+    <!-- Hamburger Menu Button -->
+<div class="hamburger-menu">
+    <div class="menu-btn" id="menuBtn">
+        <div class="menu-btn__burger"></div>
+    </div>
+</div>
+
+<!-- Navigation Menu -->
+<div class="nav-menu" id="navMenu">
+    <ul>
+        <li><a href="#dancer-presentation">Dancer Presentation</a></li>
+        <li><a href="#choreography">Choreography</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var menuBtn = document.getElementById('menuBtn');
+    var navMenu = document.getElementById('navMenu');
+    var navLinks = document.querySelectorAll('.nav-menu a'); // Select all menu links
+
+    menuBtn.addEventListener('click', function() {
+        this.classList.toggle('open');
+        navMenu.classList.toggle('open');
+    });
+
+    // Close menu when a nav link is clicked
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            menuBtn.classList.remove('open');
+            navMenu.classList.remove('open');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        var isClickInsideMenu = navMenu.contains(event.target) || menuBtn.contains(event.target);
+
+        if (!isClickInsideMenu) {
+            menuBtn.classList.remove('open');
+            navMenu.classList.remove('open');
+        }
+    });
+});
+
+document.querySelectorAll('.nav-menu a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent default anchor behavior
+
+    const targetId = this.getAttribute('href'); // Get the target id (e.g., "#about")
+    const targetSection = document.querySelector(targetId); // Select the target section
+
+    // Scroll to the target section
+    targetSection.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start' // Optional: Aligns the target at the top of the viewport
+    });
+
+    // Close the menu when a link is clicked (if not already included in your script)
+    document.getElementById('menuBtn').classList.remove('open');
+    document.getElementById('navMenu').classList.remove('open');
+  });
+});
+
+
+</script>
+
+
+</body>
+</html>
