@@ -1,0 +1,245 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Hamburger Menu Button */
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu-btn__burger {
+    width: 30px;
+    height: 3px;
+    background: #ffffff; /* Adjust color to match your design */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0; /* Starts hidden */
+    height: 100vh;
+    background: rgba(0,0,0,0.9); /* Adjust color as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0.3s ease;
+    overflow-x: hidden; /* Ensures content doesn't overflow the menu width */
+    z-index: 100; /* Ensure it's above other content */
+}
+
+/* List styles */
+.nav-menu ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margins */
+}
+
+/* Link styles */
+.nav-menu ul li a {
+    display: block; /* Makes the link fill the entire list item for easier clicking */
+    padding: 10px; /* Adds some padding around the links */
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Set your preferred color */
+    font-size: 1.5em; /* Adjust size as needed */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for links */
+.nav-menu ul li a:hover {
+    color: #cccccc; /* Lighter shade for hover effect, adjust as needed */
+}
+
+/* Ensure visibility and styling for list and links */
+.nav-menu ul {
+    list-style-type: none;
+    padding: 0; /* Removes default padding */
+}
+
+.nav-menu ul li {
+    margin: 20px 0;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: white; /* Adjust based on your theme */
+    font-size: 1.5em;
+    display: block; /* Makes the entire area clickable */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px;
+    }
+
+
+/* Menu Active State */
+.menu-btn.open .menu-btn__burger {
+    transform: rotate(45deg);
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-90deg) translateX(-50px);
+}
+
+.nav-menu.open {
+    width: 250px; /* Adjust the width of the sidebar */
+}
+
+
+
+.full-width-image-container {
+    position: relative;
+    width: 100%;
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block; 
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; 
+    height: 100vh; 
+    pointer-events: none; 
+}
+
+.content h1{
+    pointer-events: auto; 
+    padding: 0.5em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 40px; 
+    font-style: normal; 
+    font-variant: bold; 
+    font-weight: 800; 
+    line-height: 26.4px;
+}
+
+.content p{
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px;
+
+}
+
+
+
+
+#dancer-presentation{
+
+    color: white; /* Set text color to white for better visibility */
+    height: 100%;
+    flex-direction: column;
+    justify-content: center; 
+    display: block;
+}
+
+#dancer-presentation h2 {
+    text-align: center; /* Center the heading */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 40px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px;
+    margin-top: 90px;
+    color: black;
+}
+
+
+.section {
+    padding: 20px;
+}
+
+#dancer-presentation {
+    text-align: center;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.video {
+    width: 100%;
+    max-width: 560px;
+    margin: 20px 0;
+}
+
+
+#choreography {
+
+    color: rgb(0, 0, 0); 
+    padding: 100px 0; 
+}
+
+#choreography h2 {
+    text-align: center; 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: 40px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px;
+}
+
+
+
+#choreography .videos iframe {
+    width: 100%; 
+    max-width: 560px; 
+    margin: 20px 0; 
+}
+
+#contact {
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px;
+}
+
+.background-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block; 
+    font: ;
+}
