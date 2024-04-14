@@ -153,6 +153,7 @@ body, html {
     font-variant: normal; 
     font-weight: 700; 
     line-height: 26.4px;
+    margin: 20px;
 
 }
 
@@ -189,19 +190,33 @@ body, html {
     text-align: center;
 }
 
+#dancer-presentation .video-container iframe{
+    width: 100%; 
+    max-width: 560px; 
+    margin: 20px ;  
+    justify-content: start;
+    position: relative;
+    
+}
+
+/*
 .video-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
 .video {
-    width: 100%;
+    width: 50%;
     max-width: 560px;
-    margin: 20px 0;
+    margin: 20px ;
 }
-
+*/
+.section2 {
+    padding: 20px;
+    margin-top: 40%;
+}
 
 #choreography {
 
@@ -217,6 +232,8 @@ body, html {
     font-variant: normal; 
     font-weight: 700; 
     line-height: 26.4px;
+    
+    margin-top: 20%;
 }
 
 
@@ -225,6 +242,7 @@ body, html {
     width: 100%; 
     max-width: 560px; 
     margin: 20px 0; 
+    margin-top: 20px;
 }
 
 #contact {
@@ -236,10 +254,10 @@ body, html {
     line-height: 26.4px;
 }
 
-.background-image {
+.background-image img{
     position: relative;
     width: 100%;
     height: auto;
-    display: block; 
-    font: ;
+    
+
 }

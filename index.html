@@ -22,9 +22,9 @@
         <div class="section" id="dancer-presentation">
             <h2>Dancer Presentation</h2>
             <div class="video-container">
-                <iframe class="video" src="https://www.youtube.com/embed/HEZ3sXiTkEI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe class="video" src="https://www.youtube.com/embed/G_pbeYhWPzc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe class="video" src="https://youtube.com/embed/68HFuEAZSik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315"  src="https://www.youtube.com/embed/HEZ3sXiTkEI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315"  src="https://www.youtube.com/embed/G_pbeYhWPzc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315"  src="https://youtube.com/embed/68HFuEAZSik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             </div>
         </div>
@@ -45,7 +45,7 @@
 
     <div class="section" id="contact">
         <div class="background-image">
-            <img src="/Users/clairegraham/Downloads/alter ego/IMG_3145 (1).jpeg" alt="Background" class="full-width-image">
+            <img src="IMG_3145 (1).jpeg" alt="Background" class="full-width-image">
         </div>
             <h1>Contact</h1>
         </div>
@@ -102,16 +102,15 @@ document.querySelectorAll('.nav-menu a').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault(); // Prevent default anchor behavior
 
-    const targetId = this.getAttribute('href'); // Get the target id (e.g., "#about")
+    const targetId = this.getAttribute('href'); 
     const targetSection = document.querySelector(targetId); // Select the target section
 
     // Scroll to the target section
     targetSection.scrollIntoView({
       behavior: 'smooth',
-      block: 'start' // Optional: Aligns the target at the top of the viewport
+      block: 'start' 
     });
 
-    // Close the menu when a link is clicked (if not already included in your script)
     document.getElementById('menuBtn').classList.remove('open');
     document.getElementById('navMenu').classList.remove('open');
   });
