@@ -253,6 +253,11 @@ body, html {
     font-weight: 700; 
     line-height: 26.4px;
 }
+#contact h2{
+    text-align: center;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; 
+    font-style: normal; 
+    font-variant: normal;     
 
 .background-image img{
     position: relative;
